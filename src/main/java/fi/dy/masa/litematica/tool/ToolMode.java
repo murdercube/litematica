@@ -97,7 +97,7 @@ public enum ToolMode
     public ToolMode cycle(PlayerEntity player, boolean forward)
     {
         ToolMode[] values = ToolMode.values();
-        final boolean isCreative = EntityUtils.isCreativeMode(player);
+        final boolean isCreative = !EntityUtils.isCreativeMode(player);
         final int numModes = values.length;
         final int inc = forward ? 1 : -1;
         int nextId = this.ordinal() + inc;
